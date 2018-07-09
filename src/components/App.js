@@ -10,7 +10,7 @@ const Header = () => (
 const Main = (props) => (
   <div className=' artboard ' >
 
-   Main
+    repos={props.repos}
 
   </div>
 )
@@ -26,11 +26,22 @@ const Menu = (props) => (
 )
 
 class DeveloperApp extends Component {
+
+  state = {
+    repos: 0
+  }
+
   componentDidMount () {
-    fetch('https://api.github.com/users.json')
+    fetch('https://api.github.com/users/jamal7x7')
     .then(res => res.json())
-    .then(json => console.log('parsed json', json))
+    .then(json => this.addData(json))
     .catch(err => console.log('parsing failed', err))
+  }
+
+  addData = json => {
+    this.setState( () => ({ 
+      repos: json.public_repos
+    }))
   }
 
   render () {
@@ -42,7 +53,7 @@ class DeveloperApp extends Component {
 
         />
         <Main
-
+          repos={this.state.repos}
         />
 
       </div>
