@@ -2,7 +2,7 @@
 
 > Challenge: create a developer finder app (using Github api)
 
-Work in progress: https://github.com/daily-react-033-developer-finder-app
+Work in progress: https://github.com/jamal7x7/daily-react-033-developer-finder-app
 
 
 Roadmap:

@@ -3,7 +3,7 @@ import '../styles/App.css'
 
 const Header = () => (
   <header className='App-header'>
-    <h1 className='App-title'>Bezier Curve App</h1>
+    <h1 className='App-title'>Developer Finder App</h1>
   </header>
 )
 
@@ -26,6 +26,13 @@ const Menu = (props) => (
 )
 
 class DeveloperApp extends Component {
+  componentDidMount () {
+    fetch('https://api.github.com/users.json')
+    .then(res => res.json())
+    .then(json => console.log('parsed json', json))
+    .catch(err => console.log('parsing failed', err))
+  }
+
   render () {
     return (
       <div
