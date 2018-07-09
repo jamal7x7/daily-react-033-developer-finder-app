@@ -15,7 +15,7 @@ Roadmap:
 
 ---
 
-![Alt text](/src/images/daily-react-033-developer-finder-app.png?raw=true "App UI")
+![Alt text](/src/images/daily-react-33-developer-finder-app.png?raw=true "App UI")
 
 ---
 
